@@ -33,9 +33,9 @@ class Project:
         print('Install aqtinstall tool')
         system_call('pip install aqtinstall')
 
-        print('Installing Qt 6.4.2 with aqtinstall tool')
-        system_call('aqt install-qt linux desktop 6.4.2 gcc_64 --outputdir ./Qt')
-        system_call('aqt install-qt linux desktop 6.4.2 wasm_32 --outputdir ./Qt')
+        print('Installing Qt 6.5.1 with aqtinstall tool')
+        system_call('aqt install-qt linux desktop 6.5.1 gcc_64 --outputdir ./Qt')
+        system_call('aqt install-qt linux desktop 6.5.1 wasm_32 --outputdir ./Qt')
 
     def build(self):
         print(f'---BUILD {self.name()}---')
@@ -56,7 +56,7 @@ class Project:
 
     def remove_qt_install(self):
         print(f'---Remove installed Qt---')
-        delete_if_exist(self.root_dir() / '6.4.2')
+        delete_if_exist(self.root_dir() / '6.5.1')
 
 
 def main():
